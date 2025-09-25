@@ -1,0 +1,99 @@
+/* Custom overrides for metallic theme and better contrast */
+
+/* Enhanced masthead with darker overlay for better text readability */
+.masthead {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), url("../assets/img/circuit-board.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Improved text contrast */
+.masthead h1 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+}
+
+.masthead h3 {
+    color: #f8f9fa !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.masthead .lead {
+    color: #e9ecef !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+}
+
+/* Metallic-themed button styling */
+.btn-primary {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-outline-light {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light:hover {
+    color: #212529;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary {
+    background-color: #fd7e14;
+    border-color: #fd7e14;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: #e8650e;
+    border-color: #dc5e0a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Button transition effects */
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* Enhanced primary color for skills section to match metallic theme */
+.bg-primary {
+    background-color: #2c3e50 !important;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+/* Service icons with metallic styling */
+.service-icon {
+    background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+    color: #2c3e50;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #95a5a6;
+}
+
+.service-icon:hover {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: #ffffff;
+    border-color: #2980b9;
+}
