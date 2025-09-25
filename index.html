@@ -51,8 +51,7 @@
         <section class="content-section text-white text-center" id="skills" style="background-color: #343a40;">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
-                    <h3 class="text-info mb-0">Technical Expertise</h3>
-                    <h2 class="mb-5">Skills & Technologies</h2>
+                    <h2 class="mb-5">Technical Expertise</h2>
                 </div>
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -86,7 +85,6 @@
         <section class="content-section bg-dark text-white" id="portfolio">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
-                    <h3 class="text-info mb-0">Portfolio</h3>
                     <h2 class="mb-5">Recent Projects</h2>
                 </div>
                 <div class="row gx-4 gy-4 justify-content-center">
@@ -124,8 +122,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="about-container" style="background: #495057;">
                     <div class="content-section-heading text-center mb-4">
-                        <h3 class="text-info mb-0">Get To Know Me</h3>
-                        <h2 class="mb-4">About Alexander</h2>
+                        <h2 class="mb-4">Get To Know Me</h2>
                     </div>
                     <div class="row gx-4 gx-lg-5 justify-content-center align-items-center">
                         <div class="col-lg-4 text-center mb-4 mb-lg-0">
@@ -150,7 +147,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a class="btn btn-info btn-xl" href="#contact">Let's Connect</a>
+                    <a class="btn btn-info btn-xl" href="#contact">Contact</a>
                 </div>
             </div>
         </section>
@@ -159,38 +156,30 @@
         <section class="content-section bg-dark text-white" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
-                    <h3 class="text-info mb-0">Get In Touch</h3>
-                    <h2 class="mb-5">Contact Me</h2>
+                    <h2 class="mb-3">Let's Get in Touch</h2>
+                    <p class="lead mb-5">Have questions? Ready to discuss your next project?<br>I'd love to hear from you.</p>
                 </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <form id="contactForm">
-                            <div class="row gx-4 gx-lg-5">
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." required />
-                                        <label for="name">Full name</label>
-                                    </div>
+                        <div class="contact-form-container">
+                            <form id="contactForm">
+                                <div class="form-group mb-4">
+                                    <input class="form-control modern-input" id="name" type="text" placeholder="Full Name *" required />
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" required />
-                                        <label for="email">Email address</label>
-                                    </div>
+                                <div class="form-group mb-4">
+                                    <input class="form-control modern-input" id="email" type="email" placeholder="Email Address *" required />
                                 </div>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="subject" type="text" placeholder="Enter your subject..." required />
-                                <label for="subject">Subject</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 12rem" required></textarea>
-                                <label for="message">Message</label>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-xl btn-info" type="submit">Send Message</button>
-                            </div>
-                        </form>
+                                <div class="form-group mb-4">
+                                    <input class="form-control modern-input" id="phone" type="tel" placeholder="Phone Number" />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <textarea class="form-control modern-input" id="message" placeholder="Message *" rows="5" required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-info btn-lg modern-btn" type="submit">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -268,6 +257,48 @@
         }
         .project-link:hover .project-image {
             transform: scale(1.05);
+        }
+        
+        /* Contact Form Styling */
+        .contact-form-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .modern-input {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            color: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+        .modern-input:focus {
+            background: transparent;
+            border-color: #0dcaf0;
+            box-shadow: 0 0 0 0.2rem rgba(13, 202, 240, 0.15);
+            color: #f8f9fa;
+        }
+        .modern-input::placeholder {
+            color: rgba(248, 249, 250, 0.6);
+        }
+        .modern-btn {
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            background: #0dcaf0;
+        }
+        .modern-btn:hover {
+            background: #31d2f2;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(13, 202, 240, 0.3);
         }
         
         /* Landing page text contrast fixes */
