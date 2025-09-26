@@ -32,151 +32,178 @@
         </nav>
         
         <!-- Landing Page / Header-->
-        <header class="masthead d-flex align-items-center">
-            <div class="container px-4 px-lg-5 text-center" style="margin-top: 10rem;">
-                <h1 class="mb-1">Alexander Koehler</h1>
-                <h3 class="mb-5"><em>Data Engineer & AI Researcher</em></h3>
-                <div style="margin-top: 10rem;">
-                    <p class="lead mb-4 text-white-50">I've built ML powered CRM systems that increased conversion rates by 20%, multimodal medical AI achieving near-radiologist performance, cybersecurity voice cloning systems for penetration testing, and Azure-based sentiment analysis pipelines with Event Hubs and Databricks. My background spans business, psychology, and data science, with experience bridging technical solutions and business impact.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <a class="btn btn-dark btn-lg me-md-2" href="#skills">View Technical Skills</a>
-                        <a class="btn btn-outline-light btn-lg me-md-2" href="#portfolio">See Project Results</a>
-                        <a class="btn btn-info btn-lg" href="assets/Alexander_Koehler_Resume.pdf" target="_blank">Download Resume</a>
+        <header class="masthead d-flex align-items-center justify-content-center">
+            <div class="hero-overlay"></div>
+            <div class="container px-4 px-lg-5 text-center position-relative">
+                <div class="hero-content">
+                    <h1 class="mb-3">Alexander Koehler</h1>
+                    <h3 class="mb-5"><em>Data Engineer & AI Researcher</em></h3>
+                    <div class="hero-description mb-5">
+                        <p class="lead-sentence mb-3">I've built ML powered CRM systems that increased conversion rates by 20% and multimodal medical AI achieving near-radiologist performance.</p>
+                        <p class="lead-sentence mb-3">My expertise includes cybersecurity voice cloning systems for penetration testing and Azure-based sentiment analysis pipelines with Event Hubs and Databricks.</p>
+                        <p class="lead-sentence mb-0">My background spans business, psychology, and data science, with experience bridging technical solutions and business impact.</p>
+                    </div>
+                    <div class="d-grid gap-3">
+                        <a class="btn btn-primary btn-hero-mobile" href="#skills">View Technical Skills</a>   
+                        <a class="btn btn-hero-mobile btn-secondary-hero" href="#portfolio">See Project Results</a>                     
+                        <a class="btn btn-outline-light btn-hero-mobile" href="assets/Alexander_Koehler_Resume.pdf" target="_blank">Download Resume</a>
                     </div>
                 </div>
             </div>
         </header>
 
         <!-- Skills Section-->
-        <section class="content-section text-white text-center" id="skills" style="background-color: #343a40;">
+        <section class="content-section text-white text-center" id="skills" style="background-color: #0f172a; padding-top: 7.5rem; padding-bottom: 7.5rem;">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
-                    <h2 class="mb-5">Technical Expertise</h2>
+                    <h3 class="text-primary mb-0">Technical Expertise</h3>
+                    <h2 class="mb-5">Skills & Technologies</h2>
                 </div>
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3 skill-hover bg-info text-dark"><i class="fas fa-code"></i></span>
-                        <h4><strong>Programming</strong></h4>
-                        <p class="text-light mb-0">Python, TypeScript, C/C++, SQL, Bash, HTML/CSS, R</p>
+                        <div class="skill-card h-100">
+                            <span class="service-icon rounded-circle mx-auto mb-3 skill-hover bg-primary text-white"><i class="fas fa-code"></i></span>
+                            <h4><strong>Programming</strong></h4>
+                            <p class="skill-list text-primary mb-3">Python, TypeScript, C/C++, SQL, Bash, HTML/CSS, R</p>
+                            <p class="skill-description text-light">Full-stack development with expertise in data processing, web applications, and system automation. Proficient in both object-oriented and functional programming paradigms.</p>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3 skill-hover bg-info text-dark"><i class="fas fa-brain"></i></span>
-                        <h4><strong>ML & AI</strong></h4>
-                        <p class="text-light mb-0">PyTorch, Scikit-learn, Hugging Face, OpenCV, NLTK, XGBoost</p>
+                        <div class="skill-card h-100">
+                            <span class="service-icon rounded-circle mx-auto mb-3 skill-hover bg-primary text-white"><i class="fas fa-brain"></i></span>
+                            <h4><strong>ML & AI</strong></h4>
+                            <p class="skill-list text-primary mb-3">PyTorch, Scikit-learn, Hugging Face, OpenCV, NLTK, XGBoost</p>
+                            <p class="skill-description text-light">End-to-end machine learning pipeline development, from data preprocessing to model deployment. Specialized in computer vision, NLP, and predictive analytics.</p>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3 skill-hover bg-info text-dark"><i class="fas fa-cloud"></i></span>
-                        <h4><strong>Cloud & DevOps</strong></h4>
-                        <p class="text-light mb-0">Azure, Docker, Git, GCP, TravisCI, Databricks</p>
+                        <div class="skill-card h-100">
+                            <span class="service-icon rounded-circle mx-auto mb-3 skill-hover bg-primary text-white"><i class="fas fa-cloud"></i></span>
+                            <h4><strong>Cloud & DevOps</strong></h4>
+                            <p class="skill-list text-primary mb-3">Azure, Docker, Git, GCP, TravisCI, Databricks</p>
+                            <p class="skill-description text-light">Scalable cloud infrastructure design and deployment. Experience with containerization, CI/CD pipelines, and distributed computing platforms.</p>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3 skill-hover bg-info text-dark"><i class="fas fa-chart-line"></i></span>
-                        <h4><strong>Data & Visualization</strong></h4>
-                        <p class="text-light mb-0">NumPy, Pandas, Matplotlib, Seaborn, Jupyter</p>
+                        <div class="skill-card h-100">
+                            <span class="service-icon rounded-circle mx-auto mb-3 skill-hover bg-primary text-white"><i class="fas fa-chart-line"></i></span>
+                            <h4><strong>Data & Visualization</strong></h4>
+                            <p class="skill-list text-primary mb-3">NumPy, Pandas, Matplotlib, Seaborn, Jupyter</p>
+                            <p class="skill-description text-light">Advanced data analysis and visualization techniques. Expert in statistical modeling, data mining, and creating compelling visual narratives from complex datasets.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mt-5">
-                    <a class="btn btn-xl btn-info" href="#portfolio">See My Projects</a>
+                    <a class="btn btn-xl btn-primary" href="#portfolio">See My Projects</a>
                 </div>
             </div>
         </section>
 
         <!-- Portfolio-->
-        <section class="content-section bg-dark text-white" id="portfolio">
+        <section class="content-section text-white" id="portfolio" style="background-color: #11171f;">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
+                    <h3 class="text-primary mb-0">Portfolio</h3>
                     <h2 class="mb-5">Recent Projects</h2>
                 </div>
                 <div class="row gx-4 gy-4 justify-content-center">
                     <div class="col-lg-5 col-md-6">
-                        <div class="project-card text-center">
-                            <h3 class="text-info mb-3">BlueSky Sentiment Analysis</h3>
-                            <a href="bluesky-project.html" class="project-link">
+                        <div class="project-card text-center h-100">
+                            <span class="project-icon rounded-circle mx-auto mb-3 bg-primary text-white"><i class="fas fa-chart-line"></i></span>
+                            <h3 class="text-primary mb-3">BlueSky Sentiment Analysis</h3>
+                            <a href="bluesky-project.html" class="project-link mb-3 d-block">
                                 <div class="project-image-container">
                                     <img class="img-fluid project-image" src="assets/img/portfolio-1.jpg" alt="BlueSky Sentiment Analysis Project" />
                                 </div>
                             </a>
-                            <p class="mt-3 text-light">Azure-based data pipeline with real-time LLM sentiment analysis for trend reporting</p>
+                            <p class="project-description text-light">Azure-based data pipeline with real-time LLM sentiment analysis for trend reporting. Built with Event Hubs and Databricks for scalable processing.</p>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
-                        <div class="project-card text-center">
-                            <h3 class="text-info mb-3">MIMIC-CXR Medical Imaging</h3>
-                            <a href="mimic-cxr-project.html" class="project-link">
+                        <div class="project-card text-center h-100">
+                            <span class="project-icon rounded-circle mx-auto mb-3 bg-primary text-white"><i class="fas fa-x-ray"></i></span>
+                            <h3 class="text-primary mb-3">MIMIC-CXR Medical Imaging</h3>
+                            <a href="mimic-cxr-project.html" class="project-link mb-3 d-block">
                                 <div class="project-image-container">
                                     <img class="img-fluid project-image" src="assets/img/portfolio-2.jpg" alt="MIMIC-CXR Medical Imaging Project" />
                                 </div>
                             </a>
-                            <p class="mt-3 text-light">Automated chest X-ray classification using ResNet, VGG16, and LLaMA vision models</p>
+                            <p class="project-description text-light">Automated chest X-ray classification using ResNet, VGG16, and LLaMA vision models. Achieved near-radiologist performance on diagnostic accuracy.</p>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a class="btn btn-info btn-xl" href="#about">Learn About Me</a>
+                    <a class="btn btn-primary btn-xl" href="#about">Learn About Me</a>
                 </div>
             </div>
         </section>
 
         <!-- About Section-->
-        <section class="content-section text-white" id="about" style="background-color: #343a40;">
+        <section class="content-section text-white" id="about" style="background-color: #111827; padding-top: 6rem; padding-bottom: 6rem;">
             <div class="container px-4 px-lg-5">
-                <div class="about-container" style="background: #495057;">
-                    <div class="content-section-heading text-center mb-4">
-                        <h2 class="mb-4">Get To Know Me</h2>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 justify-content-center align-items-center">
-                        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <div class="content-section-heading text-center mb-5">
+                    <h3 class="text-primary mb-0">Get To Know Me</h3>
+                    <h2 class="mb-5">About Alexander</h2>
+                </div>
+                <div class="about-container" style="background: #374151;">
+                    <div class="row gx-5 gx-lg-5 justify-content-center align-items-start">
+                        <div class="col-lg-4 text-center mb-5 mb-lg-0">
                             <img src="assets/img/profile-photo.jpg" alt="Alexander Koehler" class="img-fluid rounded-circle about-image" />
                         </div>
                         <div class="col-lg-8">
-                            <p class="about-text">
-                                I'm a passionate Data Science graduate student with a focus on healthcare AI and real-time data processing. 
-                                My work combines cutting-edge machine learning techniques with practical cloud-based solutions to solve 
-                                real-world problems in medical imaging and social media analytics.
-                            </p>
-                            <p class="about-text">
-                                Currently pursuing my Master's degree at Northeastern University, I've developed expertise in building end-to-end ML pipelines, 
-                                working with large-scale medical datasets like MIMIC-CXR, and implementing modern LLM-based systems 
-                                for sentiment analysis and automated reporting.
-                            </p>
-                            <p class="about-text mb-0">
-                                I'm excited about the intersection of AI and healthcare, and I'm always looking for opportunities 
-                                to apply data science to make a meaningful impact in people's lives.
-                            </p>
+                            <div class="about-content">
+                                <p class="about-text">
+                                    I'm a passionate Data Science graduate student with a focus on healthcare AI and real-time data processing. 
+                                    My work combines cutting-edge machine learning techniques with practical cloud-based solutions to solve 
+                                    real-world problems in medical imaging and social media analytics.
+                                </p>
+                                <p class="about-text">
+                                    Currently pursuing my Master's degree at Northeastern University, I've developed expertise in building end-to-end ML pipelines, 
+                                    working with large-scale medical datasets like MIMIC-CXR, and implementing modern LLM-based systems 
+                                    for sentiment analysis and automated reporting.
+                                </p>
+                                <p class="about-text mb-0">
+                                    I'm excited about the intersection of AI and healthcare, and I'm always looking for opportunities 
+                                    to apply data science to make a meaningful impact in people's lives.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a class="btn btn-info btn-xl" href="#contact">Contact</a>
+                    <a class="btn btn-primary btn-xl" href="#contact">Let's Connect</a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="content-section bg-dark text-white" id="contact">
+        <section class="content-section text-white" id="contact" style="background-color: #11171f; padding-top: 5rem; padding-bottom: 4rem;">
             <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h2 class="mb-3">Let's Get in Touch</h2>
-                    <p class="lead mb-5">Have questions? Ready to discuss your next project?<br>I'd love to hear from you.</p>
+                <div class="content-section-heading text-center mb-4">
+                    <h3 class="text-primary mb-0">Get In Touch</h3>
+                    <h2 class="mb-3">Contact Me</h2>
+                    <p class="mb-4">Ready to discuss your next project? I'd love to hear from you.</p>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-6 col-md-8">
                         <div class="contact-form-container">
                             <form id="contactForm">
-                                <div class="form-group mb-4">
-                                    <input class="form-control modern-input" id="name" type="text" placeholder="Full Name *" required />
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <input class="form-control modern-input" id="name" type="text" placeholder="Full Name *" required />
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input class="form-control modern-input" id="email" type="email" placeholder="Email Address *" required />
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input class="form-control modern-input" id="phone" type="tel" placeholder="Phone Number (Optional)" />
                                 </div>
                                 <div class="form-group mb-4">
-                                    <input class="form-control modern-input" id="email" type="email" placeholder="Email Address *" required />
-                                </div>
-                                <div class="form-group mb-4">
-                                    <input class="form-control modern-input" id="phone" type="tel" placeholder="Phone Number" />
-                                </div>
-                                <div class="form-group mb-4">
-                                    <textarea class="form-control modern-input" id="message" placeholder="Message *" rows="5" required></textarea>
+                                    <textarea class="form-control modern-input" id="message" placeholder="Message *" rows="4" required></textarea>
                                 </div>
                                 <div class="text-center">
-                                    <button class="btn btn-info btn-lg modern-btn" type="submit">Send Message</button>
+                                    <button class="btn btn-primary btn-xl modern-btn" type="submit">Send Message</button>
                                 </div>
                             </form>
                         </div>
@@ -190,13 +217,13 @@
             <div class="container px-4 px-lg-5">
                 <ul class="list-inline mb-5">
                     <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-dark mr-3 bg-info" href="https://github.com/AlexanderHuynhKoehler" target="_blank"><i class="icon-social-github"></i></a>
+                        <a class="social-link rounded-circle text-white mr-3 bg-primary" href="https://github.com/AlexanderHuynhKoehler" target="_blank"><i class="icon-social-github"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-dark mr-3 bg-info" href="https://linkedin.com/in/alexanderkoehler" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-link rounded-circle text-white mr-3 bg-primary" href="https://linkedin.com/in/alexanderkoehler" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-dark bg-info" href="mailto:alexander@example.com"><i class="fas fa-envelope"></i></a>
+                        <a class="social-link rounded-circle text-white bg-primary" href="mailto:alexander@example.com"><i class="fas fa-envelope"></i></a>
                     </li>
                 </ul>
                 <p class="text-dark small mb-0">Copyright &copy; Alexander Koehler 2025</p>
@@ -210,9 +237,14 @@
         <script src="js/scripts.js"></script>
 
         <style>
+        :root {
+            --bs-primary: #4682B4;
+            --bs-primary-rgb: 70, 130, 180;
+        }
+        
         .about-container {
             background: #495057;
-            padding: 3rem 2.5rem;
+            padding: 3rem 3rem 2.5rem 3rem;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
@@ -223,38 +255,234 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
-        .about-image {
-            max-width: 250px;
-            width: 100%;
-            border: 4px solid #1D809F;
+        
+        .about-content {
+            padding-left: 2rem;
         }
         
-        /* Project Cards */
-        .project-card {
+        .about-image {
+            max-width: 220px;
+            width: 100%;
+        }
+        
+        /* Mobile Responsiveness */
+        
+        /* Hero button responsive sizing */
+        .btn-hero-mobile {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .btn-hero-mobile {
+                padding: 1.25rem 2.5rem;
+                font-size: 1.1rem;
+                display: inline-block;
+            }
+            
+            .hero-content .d-grid {
+                display: flex !important;
+                justify-content: center !important;
+                gap: 1rem !important;
+            }
+        }
+        
+        /* Mobile typography scaling */
+        @media (max-width: 767px) {
+            .hero-content h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .hero-content h3 {
+                font-size: 1.1rem !important;
+            }
+            
+            .lead-sentence {
+                font-size: 1rem !important;
+                line-height: 1.7 !important;
+            }
+            
+            .hero-description {
+                margin: 2rem auto 2rem auto;
+            }
+            
+            /* Section padding adjustments */
+            .content-section {
+                padding-top: 4rem !important;
+                padding-bottom: 4rem !important;
+            }
+            
+            .masthead {
+                min-height: 90vh;
+            }
+            
+            /* Skills and projects mobile stacking */
+            .skill-card,
+            .project-card {
+                margin-bottom: 2rem;
+            }
+            
+            .project-image-container {
+                height: 200px;
+            }
+            
+            /* About section mobile layout */
+            .about-container {
+                padding: 2rem 1.5rem !important;
+            }
+            
+            .about-content {
+                padding-left: 0 !important;
+                text-align: center;
+            }
+            
+            .about-text {
+                font-size: 1rem;
+                text-align: left;
+            }
+            
+            /* Contact form mobile adjustments */
+            .contact-form-container {
+                padding: 2rem 1.5rem !important;
+            }
+            
+            .modern-input {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+            
+            /* Service/project icons smaller on mobile */
+            .service-icon,
+            .project-icon {
+                height: 3.5rem !important;
+                width: 3.5rem !important;
+                line-height: 4rem !important;
+                font-size: 1.3rem !important;
+            }
+        }
+        
+        /* Small mobile devices */
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .btn-hero-mobile {
+                padding: 0.9rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            .about-image {
+                max-width: 180px !important;
+            }
+        }
+        
+        /* Tablet landscape improvements */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .skill-card,
+            .project-card {
+                margin-bottom: 2rem;
+            }
+            
+            .project-image-container {
+                height: 220px;
+            }
+        }
+        
+        /* Touch-friendly improvements */
+        @media (hover: none) {
+            .skill-card:hover,
+            .project-card:hover {
+                transform: none;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            .skill-hover:hover,
+            .project-icon:hover {
+                transform: none;
+            }
+        }
+        
+        /* Skills Section */
+        .skill-card {
+            background: #374151;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            padding: 1rem;
-            border-radius: 10px;
+            border: 1px solid #4b5563;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            background: #4b5563;
+            border-color: #4682B4;
+        }
+        .skill-list {
+            font-size: 0.9rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .skill-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        /* Project Cards - matching skills treatment */
+        .project-card {
+            background: #374151;
+            padding: 2rem 1.5rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #4b5563;
         }
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            background: #4b5563;
+            border-color: #4682B4;
         }
+        
+        .project-icon {
+            height: 4rem;
+            width: 4rem;
+            display: block;
+            line-height: 4.5rem;
+            font-size: 1.5rem;
+            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-icon:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+        
         .project-image-container {
             overflow: hidden;
             border-radius: 8px;
             position: relative;
-            height: 300px;
+            height: 250px;
+            margin-bottom: 1rem;
         }
+        
         .project-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
-        .project-link {
-            text-decoration: none;
-            display: block;
-        }
+        
         .project-link:hover .project-image {
             transform: scale(1.05);
         }
@@ -278,8 +506,8 @@
         }
         .modern-input:focus {
             background: transparent;
-            border-color: #0dcaf0;
-            box-shadow: 0 0 0 0.2rem rgba(13, 202, 240, 0.15);
+            border-color: #4682B4;
+            box-shadow: 0 0 0 0.2rem rgba(70, 130, 180, 0.15);
             color: #f8f9fa;
         }
         .modern-input::placeholder {
@@ -293,30 +521,111 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
             border: none;
-            background: #0dcaf0;
+            background: #4682B4;
         }
         .modern-btn:hover {
-            background: #31d2f2;
+            background: #5B9BD5;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(13, 202, 240, 0.3);
+            box-shadow: 0 10px 25px rgba(70, 130, 180, 0.3);
         }
         
-        /* Landing page text contrast fixes */
-        .masthead {
-            padding-top: 12rem !important;
-            padding-bottom: 4rem !important;
+        /* Button Styles */
+        .btn-primary {
+            background-color: #4682B4;
+            border-color: #4682B4;
         }
-        .masthead h1 {
+        .btn-primary:hover {
+            background-color: #5B9BD5;
+            border-color: #5B9BD5;
+        }
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(70, 130, 180, 0.25);
+        }
+        
+        /* Text Colors */
+        .text-primary {
+            color: #4682B4 !important;
+        }
+        
+        /* Background Colors */
+        .bg-primary {
+            background-color: #4682B4 !important;
+        }
+        
+        /* Service Icons */
+        .service-icon.bg-primary {
+            background-color: #4682B4 !important;
+        }
+        
+        /* Landing page - better overlay and text treatment */
+        .masthead {
+            min-height: 100vh;
+            padding: 0 !important;
+            position: relative;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero-description {
+            text-align: center;
+            max-width: 700px;
+            margin: 3rem auto 2.5rem auto;
+        }
+        
+        .lead-sentence {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f8f9fa !important;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+        
+        .hero-content h1 {
             color: #ffffff !important;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
-        .masthead h3 {
+        
+        .hero-content h3 {
             color: #f8f9fa !important;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            font-size: 1.3rem;
         }
-        .masthead .lead {
-            color: #f8f9fa !important;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        
+        /* Button styles for hero section */
+        .btn-secondary-hero {
+            background-color: #374151;
+            color: white;
+            border: 1px solid #374151;
+        }
+        
+        .btn-secondary-hero:hover {
+            background-color: #4b5563;
+            border-color: #4b5563;
+            color: white;
+        }
+        
+        .btn-outline-light {
+            color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: #f8f9fa;
+            color: #212529;
         }
         .about-text {
             font-size: 1.1rem;
