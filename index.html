@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-    </head>
+        <link href="css/custom-styles.css" rel="stylesheet" />    </head>
     <body id="page-top">
         <!-- Navigation-->
         <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
@@ -32,8 +32,8 @@
         </nav>
         
         <!-- Landing Page / Header-->
-        <header class="masthead d-flex align-items-center justify-content-center">
-            <div class="hero-overlay"></div>
+        <!-- Landing Page / Header-->
+        <header class="masthead masthead-mesh d-flex align-items-center justify-content-center">
             <div class="container px-4 px-lg-5 text-center position-relative">
                 <div class="hero-content">
                     <h1 class="mb-3">Alexander Koehler</h1>
@@ -44,9 +44,9 @@
                         <p class="lead-sentence mb-0">My background spans business, psychology, and data science, with experience bridging technical solutions and business impact.</p>
                     </div>
                     <div class="d-grid gap-3">
-                        <a class="btn btn-primary btn-hero-mobile" href="#skills">View Technical Skills</a>   
-                        <a class="btn btn-hero-mobile btn-secondary-hero" href="#portfolio">See Project Results</a>                     
-                        <a class="btn btn-outline-light btn-hero-mobile" href="assets/Alexander_Koehler_Resume.pdf" target="_blank">Download Resume</a>
+                        <a class="btn btn-hero-primary btn-hero-mobile" href="#skills">View Technical Skills</a>
+                        <a class="btn btn-hero-secondary btn-hero-mobile" href="#portfolio">See Project Results</a>
+                        <a class="btn btn-hero-accent btn-hero-mobile" href="assets/Alexander_Koehler_Resume.pdf" target="_blank">Download Resume</a>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,6 @@
         <section class="content-section text-white text-center" id="skills" style="background-color: #0f172a; padding-top: 7.5rem; padding-bottom: 7.5rem;">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
-                    <h3 class="text-primary mb-0">Technical Expertise</h3>
                     <h2 class="mb-5">Skills & Technologies</h2>
                 </div>
                 <div class="row gx-4 gx-lg-5">
@@ -69,7 +68,7 @@
                                 Computer vision is revolutionizing industries from autonomous vehicles to manufacturing, with healthcare diagnostics seeing particularly transformative impact as AI systems detect diseases from medical imaging at scale.
                             </p>
                             <p class="skill-description text-light text-start mb-0">
-                                I developed a multimodal medical imaging system for the MIMIC-CXR dataset that achieved near-radiologist diagnostic accuracy on chest X-ray classification, combining CNN architectures (ResNet-50, VGG16) with fine-tuned LLaMA vision models across 220K+ medical images.
+                                My chest X-ray diagnostic system used fine-tuned vision models to achieve near-radiologist accuracy, generating clinical summaries across 220K+ images
                             </p>
                         </div>
                     </div>
@@ -82,8 +81,7 @@
                                 LLM-powered agents are creating sophisticated new attack vectors in cybersecurity, with AI-generated social engineering becoming one of the most difficult threats to defend against.
                             </p>
                             <p class="skill-description text-light text-start mb-0">
-                                I built a real-time voice cloning system for penetration testing that generates fully autonomous phone calls, deploying speech synthesis models that respond dynamically to conversation flow by integrating voice cloning, real-time speech-to-text transcription, LLM-based conversational logic, and text-to-speech generation.
-                            </p>
+                                I've designed a security penetration testing system that orchestrates autonomous phone calls by coordinating voice cloning, real-time speech transcription, and LLM-driven conversational agents that respond dynamically to targets                              </p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
@@ -95,7 +93,7 @@
                                 Streaming data architectures enable organizations to respond to emerging trends as they happen rather than discovering them days later in batch reports.
                             </p>
                             <p class="skill-description text-light text-start mb-0">
-                                I built an end-to-end Azure pipeline for BlueSky sentiment analysis that demonstrates production-grade cloud architecture with Event Hubs for ingestion, Databricks for distributed processing, and Data Lake for storage, performing LLM-based sentiment classification on live social media streams with automated daily trend summaries.
+                                An Azure pipeline I developed processes live social media streams for LLM-based sentiment analysis with automated trend reporting
                             </p>
                         </div>
                     </div>
@@ -108,7 +106,7 @@
                                 The best solutions emerge from experimenting across domains and connecting technologies in novel ways.
                             </p>
                             <p class="skill-description text-light text-start mb-0">
-                                I've built systems spanning healthcare diagnostics, cybersecurity testing, and real-time analytics - integrating CRM platforms with ML prediction engines (achieving 20% conversion increases), coordinating real-time speech-to-text with LLM reasoning for voice synthesis, and architecting cloud pipelines across Azure's full stack to solve diverse technical challenges.
+                                My work spans healthcare, cybersecurity, and analytics - each requiring creative integration of technologies to solve cross-domain challenges.
                             </p>
                         </div>
                     </div>
@@ -122,7 +120,6 @@
         <section class="content-section text-white" id="portfolio" style="background-color: #11171f;">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
-                    <h3 class="text-primary mb-0">Portfolio</h3>
                     <h2 class="mb-5">Recent Projects</h2>
                 </div>
                 <div class="row gx-4 gy-4 justify-content-center">
@@ -159,7 +156,6 @@
         <section class="content-section text-white" id="current-work" style="background-color: #0f172a; padding-top: 5rem; padding-bottom: 5rem;">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
-                    <h3 class="text-primary mb-0">What I'm Building</h3>
                     <h2 class="mb-5">Current Work</h2>
                 </div>
                 <div class="row gx-4 gy-4 justify-content-center">
@@ -190,19 +186,23 @@
                     <a class="btn btn-primary btn-xl" href="#about">Learn About Me</a>
             </div>
         </section>        <!-- About Section-->
+        <!-- About Section-->
         <section class="content-section text-white" id="about" style="background-color: #111827; padding-top: 6rem; padding-bottom: 6rem;">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center mb-5">
-                    <h3 class="text-primary mb-0">Get To Know Me</h3>
                     <h2 class="mb-5">About Alexander</h2>
                 </div>
-                <div class="about-container" style="background: #374151;">
-                    <div class="row gx-5 gx-lg-5 justify-content-center align-items-start">
-                        <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                            <img src="assets/img/profile-photo.jpg" alt="Alexander Koehler" class="img-fluid rounded-circle about-image" />
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="about-content">
+                
+                <div class="row gx-5 gx-lg-5 justify-content-center align-items-center">
+                    <!-- Profile Image - Outside/Left of the box -->
+                    <div class="col-lg-3 text-center mb-5 mb-lg-0">
+                        <img src="assets/img/profile-photo.jpg" alt="Alexander Koehler" class="img-fluid rounded-circle about-image" />
+                    </div>
+                    
+                    <!-- Text Content Box -->
+                    <div class="col-lg-9">
+                        <div class="about-container" style="background: #374151;">
+                            <div class="about-content" style="padding-left: 0;">
                                 <p class="about-text">
                                     I see problems everywhere - not in a pessimistic way, but as puzzles waiting for solutions. Take home automation: the entire industry has ignored LLMs even though they provide vastly superior experiences to preprogrammed voice commands. So I'm building my own - replacing Alexa with a Raspberry Pi running a custom GPT pipeline I can SSH into and integrate with my house. This isn't a school project or portfolio piece; I'm building it because I want to actually use it, and the technical challenge itself is what drives me.
                                 </p>
@@ -216,17 +216,15 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="text-center mt-5">
                     <a class="btn btn-primary btn-xl" href="#contact">Let's Connect</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Contact Section -->
+        </section>        <!-- Contact Section -->
         <section class="content-section text-white" id="contact" style="background-color: #11171f; padding-top: 5rem; padding-bottom: 4rem;">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center mb-4">
-                    <h3 class="text-primary mb-0">Get In Touch</h3>
                     <h2 class="mb-3">Contact Me</h2>
                     <p class="mb-4">Ready to discuss your next project? I'd love to hear from you.</p>
                 </div>
@@ -281,448 +279,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-
-        <style>
-        :root {
-            --bs-primary: #4682B4;
-            --bs-primary-rgb: 70, 130, 180;
-        }
-        
-        /* Current Work Cards */
-        .current-work-card {
-            background: #1f2937;
-            padding: 2rem 1.5rem;
-            border-radius: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #374151;
-            min-height: 280px;
-        }
-
-        .current-work-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            border-color: #4682B4;
-        }
-
-        .project-icon-small {
-            height: 3rem;
-            width: 3rem;
-            display: block;
-            line-height: 3.5rem;
-            font-size: 1.2rem;
-            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-        }
-
-        .current-work-description {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            text-align: center;
-        }
-
-        .badge {
-            font-size: 0.75rem;
-            padding: 0.4rem 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        .about-container {
-            background: #495057;
-            padding: 3rem 3rem 2.5rem 3rem;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            color: #f8f9fa;
-        }
-        .about-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .about-content {
-            padding-left: 2rem;
-        }
-        
-        .about-image {
-            max-width: 220px;
-            width: 100%;
-        }
-        
-        /* Mobile Responsiveness */
-        
-        /* Hero button responsive sizing */
-        .btn-hero-mobile {
-            padding: 1rem 2rem;
-            font-size: 1rem;
-        }
-        
-        @media (min-width: 768px) {
-            .btn-hero-mobile {
-                padding: 1.25rem 2.5rem;
-                font-size: 1.1rem;
-                display: inline-block;
-            }
-            
-            .hero-content .d-grid {
-                display: flex !important;
-                justify-content: center !important;
-                gap: 1rem !important;
-            }
-        }
-        
-        /* Mobile typography scaling */
-        @media (max-width: 767px) {
-            .hero-content h1 {
-                font-size: 2.5rem !important;
-            }
-            
-            .hero-content h3 {
-                font-size: 1.1rem !important;
-            }
-            
-            .lead-sentence {
-                font-size: 1rem !important;
-                line-height: 1.7 !important;
-            }
-            
-            .hero-description {
-                margin: 2rem auto 2rem auto;
-            }
-            
-            /* Section padding adjustments */
-            .content-section {
-                padding-top: 4rem !important;
-                padding-bottom: 4rem !important;
-            }
-            
-            .masthead {
-                min-height: 90vh;
-            }
-            
-            /* Skills and projects mobile stacking */
-            .skill-card,
-            .project-card {
-                margin-bottom: 2rem;
-            }
-            
-            .project-image-container {
-                height: 200px;
-            }
-            
-            /* About section mobile layout */
-            .about-container {
-                padding: 2rem 1.5rem !important;
-            }
-            
-            .about-content {
-                padding-left: 0 !important;
-                text-align: center;
-            }
-            
-            .about-text {
-                font-size: 1rem;
-                text-align: left;
-            }
-            
-            /* Contact form mobile adjustments */
-            .contact-form-container {
-                padding: 2rem 1.5rem !important;
-            }
-            
-            .modern-input {
-                font-size: 16px; /* Prevents zoom on iOS */
-            }
-            
-            /* Service/project icons smaller on mobile */
-            .service-icon,
-            .project-icon {
-                height: 3.5rem !important;
-                width: 3.5rem !important;
-                line-height: 4rem !important;
-                font-size: 1.3rem !important;
-            }
-        }
-        
-        /* Small mobile devices */
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 2rem !important;
-            }
-            
-            .btn-hero-mobile {
-                padding: 0.9rem 1.5rem;
-                font-size: 0.9rem;
-            }
-            
-            .container {
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
-            }
-            
-            .about-image {
-                max-width: 180px !important;
-            }
-        }
-        
-        /* Tablet landscape improvements */
-        @media (min-width: 768px) and (max-width: 991px) {
-            .skill-card,
-            .project-card {
-                margin-bottom: 2rem;
-            }
-            
-            .project-image-container {
-                height: 220px;
-            }
-        }
-        
-        /* Touch-friendly improvements */
-        @media (hover: none) {
-            .skill-card:hover,
-            .project-card:hover {
-                transform: none;
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            }
-            
-            .skill-hover:hover,
-            .project-icon:hover {
-                transform: none;
-            }
-        }
-        
-        /* Skills Section */
-        .skill-card {
-            background: #374151;
-            padding: 2rem 1.5rem;
-            border-radius: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #4b5563;
-        }
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            background: #4b5563;
-            border-color: #4682B4;
-        }
-        .skill-list {
-            font-size: 0.9rem;
-            font-weight: 600;
-            line-height: 1.4;
-        }
-        .skill-description {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            text-align: center;
-        }
-        
-        /* Project Cards - matching skills treatment */
-        .project-card {
-            background: #374151;
-            padding: 2rem 1.5rem;
-            border-radius: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #4b5563;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            background: #4b5563;
-            border-color: #4682B4;
-        }
-        
-        .project-icon {
-            height: 4rem;
-            width: 4rem;
-            display: block;
-            line-height: 4.5rem;
-            font-size: 1.5rem;
-            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-icon:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .project-description {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            text-align: left;
-        }
-        
-        .project-image-container {
-            overflow: hidden;
-            border-radius: 8px;
-            position: relative;
-            height: 250px;
-            margin-bottom: 1rem;
-        }
-        
-        .project-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .project-link:hover .project-image {
-            transform: scale(1.05);
-        }
-        
-        /* Contact Form Styling */
-        .contact-form-container {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 3rem 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        .modern-input {
-            background: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            padding: 1rem 1.5rem;
-            font-size: 1rem;
-            color: #f8f9fa;
-            transition: all 0.3s ease;
-        }
-        .modern-input:focus {
-            background: transparent;
-            border-color: #4682B4;
-            box-shadow: 0 0 0 0.2rem rgba(70, 130, 180, 0.15);
-            color: #f8f9fa;
-        }
-        .modern-input::placeholder {
-            color: rgba(248, 249, 250, 0.6);
-        }
-        .modern-btn {
-            padding: 1rem 3rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            border: none;
-            background: #4682B4;
-        }
-        .modern-btn:hover {
-            background: #5B9BD5;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(70, 130, 180, 0.3);
-        }
-        
-        /* Button Styles */
-        .btn-primary {
-            background-color: #4682B4;
-            border-color: #4682B4;
-        }
-        .btn-primary:hover {
-            background-color: #5B9BD5;
-            border-color: #5B9BD5;
-        }
-        .btn-primary:focus {
-            box-shadow: 0 0 0 0.2rem rgba(70, 130, 180, 0.25);
-        }
-        
-        /* Text Colors */
-        .text-primary {
-            color: #4682B4 !important;
-        }
-        
-        /* Background Colors */
-        .bg-primary {
-            background-color: #4682B4 !important;
-        }
-        
-        /* Service Icons */
-        .service-icon.bg-primary {
-            background-color: #4682B4 !important;
-        }
-        
-        /* Landing page - better overlay and text treatment */
-        .masthead {
-            min-height: 100vh;
-            padding: 0 !important;
-            position: relative;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            z-index: 2;
-            position: relative;
-        }
-        
-        .hero-description {
-            text-align: center;
-            max-width: 700px;
-            margin: 3rem auto 2.5rem auto;
-        }
-        
-        .lead-sentence {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #f8f9fa !important;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-        }
-        
-        .hero-content h1 {
-            color: #ffffff !important;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-        }
-        
-        .hero-content h3 {
-            color: #f8f9fa !important;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-            font-size: 1.3rem;
-        }
-        
-        /* Button styles for hero section */
-        .btn-secondary-hero {
-            background-color: #374151;
-            color: white;
-            border: 1px solid #374151;
-        }
-        
-        .btn-secondary-hero:hover {
-            background-color: #4b5563;
-            border-color: #4b5563;
-            color: white;
-        }
-        
-        .btn-outline-light {
-            color: #f8f9fa;
-            border-color: #f8f9fa;
-        }
-        
-        .btn-outline-light:hover {
-            background-color: #f8f9fa;
-            color: #212529;
-        }
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #f8f9fa;
-            margin-bottom: 1.5rem;
-        }
-        .skill-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .skill-hover:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-        }
-        </style>
     </body>
 </html>

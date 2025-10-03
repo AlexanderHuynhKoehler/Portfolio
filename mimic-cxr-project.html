@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>MIMIC-CXR Medical Imaging | Alexander Koehler</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        .project-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 2px solid #4682B4;
+            padding: 4rem 0;
+        }
+        
+        .metric-card {
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            border-color: #4682B4;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(70, 130, 180, 0.3);
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4682B4;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-content {
+            background: #1e293b;
+            padding: 4rem 0;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .section-title {
+            color: #4682B4;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .method-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #cbd5e1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .method-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .method-text strong {
+            color: #4682B4;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+        
+        .tech-badge {
+            background: #334155;
+            color: #4682B4;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .results-table {
+            background: #0f172a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .results-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .results-table th {
+            background: #1e293b;
+            color: #4682B4;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #334155;
+        }
+        
+        .results-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #334155;
+            color: #cbd5e1;
+        }
+        
+        .results-table tr:hover {
+            background: rgba(70, 130, 180, 0.1);
+        }
+        
+        .highlight-metric {
+            background: #0f172a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #4682B4;
+            margin: 1.5rem 0;
+        }
+        
+        .btn-download {
+            background: #4682B4;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #4682B4;
+        }
+        
+        .btn-download:hover {
+            background: transparent;
+            color: #4682B4;
+            text-decoration: none;
+        }
+        
+        .btn-back {
+            background: transparent;
+            color: #4682B4;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #4682B4;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-back:hover {
+            background: #4682B4;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .result-img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 10px;
+            border: 2px solid #334155;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+        }
+        
+        .result-img:hover {
+            transform: scale(1.02);
+            border-color: #4682B4;
+        }
+        
+        /* Lightbox for full-size images */
+        .diagram-lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            cursor: pointer;
+        }
+        
+        .diagram-lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+        }
+        
+        .diagram-lightbox .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10000;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .project-hero {
+                min-height: 40vh;
+                padding: 2rem 0;
+            }
+            
+            .section-content {
+                padding: 2rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .metric-value {
+                font-size: 1.8rem;
+            }
+            
+            .metric-label {
+                font-size: 0.8rem;
+            }
+            
+            .results-table {
+                font-size: 0.9rem;
+            }
+            
+            .results-table th, .results-table td {
+                padding: 0.75rem;
+            }
+            
+            .tech-badge {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .diagram-lightbox .close-lightbox {
+                top: 10px;
+                right: 10px;
+                font-size: 50px;
+                padding: 15px;
+                background: rgba(0,0,0,0.5);
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="container px-4 px-lg-5">
+            <!-- Back to Portfolio Button -->
+            <div class="mb-4">
+                <a href="index.html#portfolio" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="mb-3" style="font-size: 3rem; font-weight: 700;">MIMIC-CXR Medical Imaging</h1>
+                    <p class="lead mb-4" style="font-size: 1.4rem; color: #94a3b8;">
+                        Automated Chest X-ray Classification with Deep Learning
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: #cbd5e1;">
+                        Developed a multimodal AI system that classifies chest X-ray abnormalities and generates diagnostic reports. Achieved near-radiologist accuracy on key pathologies using ResNet-18 and LLaMA-3.2-11B Vision models trained on 220,000+ medical images.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="section-content" style="background: #0f172a;">
+        <div class="container px-4 px-lg-5">
+            <h2 class="section-title text-center">Key Performance Metrics</h2>
+            
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <span class="metric-value">86.2%</span>
+                        <span class="metric-label">Peak AUC Score</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <span class="metric-value">220K+</span>
+                        <span class="metric-label">Images Analyzed</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <span class="metric-value">84.2%</span>
+                        <span class="metric-label">F1 Score (Best)</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <span class="metric-value">14</span>
+                        <span class="metric-label">Pathologies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section-content">
+        <div class="container px-4 px-lg-5">
+            <h2 class="section-title">Introduction</h2>
+            <p class="section-subtitle">Bridging the gap in medical imaging with AI</p>
+            
+            <div class="method-text">
+                <p>
+                    Chest X-rays remain the most common medical imaging procedure worldwide, yet their interpretation is prone to error and requires significant expertise. The MIMIC-CXR dataset provides an unprecedented opportunity to develop AI systems that can assist radiologists by automating initial screening and generating preliminary reports.
+                </p>
+                <p>
+                    This project leverages the MIMIC-CXR database containing over 370,000 chest X-ray images with corresponding radiology reports. Our goal was to build a system capable of both classifying chest abnormalities and generating coherent diagnostic reports - essentially replicating key aspects of a radiologist's workflow.
+                </p>
+                <p>
+                    The challenge extends beyond simple image classification. Medical imaging requires understanding subtle visual patterns, handling significant class imbalance (rare diseases), and generating reports that use precise medical terminology while remaining clinically useful.
+                </p>
+            </div>
+
+            <div class="tech-stack">
+                <span class="tech-badge">PyTorch 2.0</span>
+                <span class="tech-badge">ResNet-18</span>
+                <span class="tech-badge">VGG-16</span>
+                <span class="tech-badge">LLaMA-3.2-11B Vision</span>
+                <span class="tech-badge">NVIDIA A100 80GB</span>
+                <span class="tech-badge">4-bit Quantization</span>
+                <span class="tech-badge">Hugging Face</span>
+                <span class="tech-badge">MIMIC-CXR v2.1.0</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method -->
+    <section class="section-content" style="background: #0f172a;">
+        <div class="container px-4 px-lg-5">
+            <h2 class="section-title">Method</h2>
+            <p class="section-subtitle">A three-stage pipeline from raw images to diagnostic insights</p>
+            
+            <div class="method-text">
+                <h3 style="color: #4682B4; margin-top: 2rem; margin-bottom: 1rem;">Data Preprocessing & Curation</h3>
+                <p>
+                    We processed the massive MIMIC-CXR dataset by first filtering for posterior-anterior (PA) views to ensure diagnostic consistency. Images underwent standardization to 224×224 resolution with normalization (μ=0.5, σ=0.5). We merged metadata from multiple sources including patient records, CheXpert labels, and DICOM headers to create unified training manifests.
+                </p>
+                <p>
+                    The final curated dataset contained 4,742 PA chest X-rays with binary labels (case/control) across 14 pathologies. We implemented medical-aware data augmentation including controlled rotation (±10°) and horizontal flips while preserving anatomical validity.
+                </p>
+
+                <div class="highlight-metric">
+                    <strong style="color: #4682B4;">Preprocessing Pipeline:</strong> 220K+ images → Filter PA views → Resize to 224×224 → Normalize → Augment → 4,742 training samples with 14 pathology labels
+                </div>
+
+                <h3 style="color: #4682B4; margin-top: 2rem; margin-bottom: 1rem;">CNN Architecture Selection & Training</h3>
+                <p>
+                    We evaluated multiple state-of-the-art CNN architectures including VGG-16, ResNet-18, ResNet-50, and DenseNet-121. Each model was initialized with ImageNet pretrained weights and fine-tuned on our medical imaging dataset. The final fully connected layer was modified for binary classification per pathology.
+                </p>
+                <p>
+                    ResNet-18 emerged as the optimal architecture, balancing accuracy with computational efficiency. Training employed the AdamW optimizer (learning rate: 1e-4, weight decay: 0.01) with cosine annealing schedule. We implemented early stopping monitoring validation loss over 5 epochs to prevent overfitting.
+                </p>
+                <p>
+                    Training configuration: Batch size 32, gradient accumulation for effective batch 128, mixed precision training on NVIDIA A100 GPUs. The model processed approximately 150 images/second during inference.
+                </p>
+
+                <h3 style="color: #4682B4; margin-top: 2rem; margin-bottom: 1rem;">Multimodal Report Generation with LLaMA</h3>
+                <p>
+                    For report generation, we fine-tuned LLaMA-3.2-11B-Vision-Instruct, a cutting-edge multimodal transformer. To handle the model's massive parameter count on limited hardware, we implemented several optimization strategies:
+                </p>
+                <ul style="color: #cbd5e1; line-height: 1.8;">
+                    <li>4-bit quantization: Reduced memory footprint from 44GB to 8GB</li>
+                    <li>Gradient checkpointing: Traded 30% compute for 50% memory savings</li>
+                    <li>Mixed precision training: FP16 compute with FP32 master weights</li>
+                    <li>Custom data collator: UnslothVisionDataCollator for multimodal batching</li>
+                </ul>
+                <p>
+                    The model was trained with instruction-based prompting using expert radiographer templates. Training spanned 2 epochs with 200 maximum steps, warmup over 5 steps, and a learning rate of 1e-4. We used an effective batch size of 32 (8 per device × 4 gradient accumulation steps) on 2,562 training samples.
+                </p>
+
+                <div class="highlight-metric">
+                    <strong style="color: #4682B4;">LLaMA Configuration:</strong> 11B parameters → 4-bit quantization → 8GB VRAM → Batch 32 → 2 epochs → 200 max steps
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results & Analysis -->
+    <section class="section-content">
+        <div class="container px-4 px-lg-5">
+            <h2 class="section-title">Results & Analysis</h2>
+            <p class="section-subtitle">Performance evaluation across multiple chest pathologies</p>
+            
+            <div class="method-text">
+                <p>
+                    Our ResNet-18 model achieved varying performance across different pathologies, with notable success in detecting common abnormalities. The results demonstrate both the promise and challenges of automated chest X-ray interpretation.
+                </p>
+            </div>
+
+            <div class="results-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Disease</th>
+                            <th>Accuracy</th>
+                            <th>F1 Score</th>
+                            <th>ROC-AUC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(70, 130, 180, 0.1);">
+                            <td><strong>Pleural Effusion</strong></td>
+                            <td>73.85%</td>
+                            <td>0.7733</td>
+                            <td><strong>0.8618</strong></td>
+                        </tr>
+                        <tr style="background: rgba(70, 130, 180, 0.1);">
+                            <td><strong>Atelectasis</strong></td>
+                            <td>76.47%</td>
+                            <td><strong>0.8421</strong></td>
+                            <td>0.8279</td>
+                        </tr>
+                        <tr>
+                            <td>Consolidation</td>
+                            <td>73.17%</td>
+                            <td>0.2667</td>
+                            <td>0.7270</td>
+                        </tr>
+                        <tr>
+                            <td>Pneumonia</td>
+                            <td>67.92%</td>
+                            <td>0.5405</td>
+                            <td>0.6914</td>
+                        </tr>
+                        <tr>
+                            <td>Pneumothorax</td>
+                            <td>68.00%</td>
+                            <td>0.3333</td>
+                            <td>0.6667</td>
+                        </tr>
+                        <tr>
+                            <td>Cardiomegaly</td>
+                            <td>27.27%</td>
+                            <td>0.1111</td>
+                            <td>0.6000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Results visualization placeholder -->
+            <img src="assets/img/mimic-results-chart.png" alt="Performance metrics visualization" class="result-img" />
+            
+            <div class="method-text">
+                <h3 style="color: #4682B4; margin-top: 2rem; margin-bottom: 1rem;">Key Findings</h3>
+                
+                <p>
+                    Strong Performance on Common Pathologies: The model excelled at detecting pleural effusion (AUC: 0.862) and atelectasis (F1: 0.842). These conditions present clear visual markers that CNNs can reliably identify - fluid levels for effusions and collapsed lung regions for atelectasis. The high F1 score for atelectasis indicates balanced precision-recall performance crucial for clinical deployment.
+                </p>
+                
+                <p>
+                    Challenges with Rare Conditions: Cardiomegaly detection proved particularly challenging (accuracy: 27.27%), likely due to severe class imbalance in the training data. This pathology requires subtle assessment of cardiac silhouette size relative to the thoracic cavity - a task that benefits from more training examples and potentially ensemble approaches.
+                </p>
+                
+                <p>
+                    Report Generation Quality: LLaMA-3.2-11B-Vision successfully generated coherent diagnostic narratives that appropriately used medical terminology. The model learned to structure reports with findings, impressions, and recommendations sections. However, occasional hallucinations of findings not present in images highlight the need for human oversight in clinical settings.
+                </p>
+
+                <h3 style="color: #4682B4; margin-top: 2rem; margin-bottom: 1rem;">Clinical Implications</h3>
+                
+                <p>
+                    Our results suggest that AI-assisted chest X-ray interpretation is approaching clinical viability for common pathologies. The system could serve as an effective initial screening tool, prioritizing cases for radiologist review and providing preliminary reports to accelerate workflows.
+                </p>
+                
+                <p>
+                    The performance gap between common and rare conditions underscores a critical challenge in medical AI: dataset representation. Future work should focus on targeted data collection for underrepresented pathologies and synthetic data generation techniques to balance training distributions.
+                </p>
+
+                <div class="highlight-metric">
+                    <strong style="color: #4682B4;">Clinical Impact:</strong> 86.2% peak AUC → Effective for screening common pathologies → Requires human oversight for rare conditions → Potential 40% reduction in initial review time
+                </div>
+
+                <h3 style="color: #4682B4; margin-top: 2rem; margin-bottom: 1rem;">Future Directions</h3>
+                
+                <p>
+                    Several avenues could improve model performance:
+                </p>
+                <ul style="color: #cbd5e1; line-height: 1.8;">
+                    <li>Ensemble Methods: Combining multiple CNN architectures to capture diverse visual features</li>
+                    <li>Focal Loss Implementation: Better handling of class imbalance through modified loss functions</li>
+                    <li>Larger Vision Models: Exploring models like SAM (Segment Anything) for better feature extraction</li>
+                    <li>Multi-view Integration: Incorporating lateral views alongside PA images for comprehensive analysis</li>
+                    <li>Federated Learning: Training across multiple hospital systems while preserving patient privacy</li>
+                </ul>
+            </div>
+
+            <!-- Additional result images -->
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="section-content" style="background: #1e293b; text-align: center; padding: 3rem 0;">
+        <div class="container px-4 px-lg-5">
+            <h3 class="mb-3" style="color: #4682B4;">Full Research & Implementation</h3>
+            <p class="mb-4" style="font-size: 1.1rem;">Access the complete research paper and source code for the MIMIC-CXR medical imaging system.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.overleaf.com/read/ndtcsshrwzzd#1ced8a" class="btn-download" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf"></i> Download Full Paper (PDF)
+                </a>
+                <a href="https://github.com/yuanditang/MIMIC-CXR" class="btn-download" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View Repository
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Navigation -->
+    <footer style="background: #0f172a; padding: 2rem 0; text-align: center; border-top: 1px solid #334155;">
+        <div class="container px-4 px-lg-5">
+            <a href="index.html#portfolio" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="diagram-lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightboxImg" src="" alt="Full size image">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Lightbox for result images
+        document.querySelectorAll('.result-img').forEach(img => {
+            img.onclick = function() {
+                document.getElementById('lightbox').style.display = 'block';
+                document.getElementById('lightboxImg').src = this.src;
+            };
+        });
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
